@@ -10,8 +10,6 @@
 > By injecting a learned, content-agnostic visual trigger, VidDoS coerces the autoregressive decoder into an unbounded generation regime — inducing a **205× token expansion** and **>15× latency inflation** — without modifying any textual prompt.
 
 **Paper:** *VidDoS: Universal Denial-of-Service Attack on Video-based Large Language Models*
-Duoxun Tang, Dasen Dai, Jiyao Wang, Xiao Yang, Siqi Cai\*
-ECCV 2026 | \* Corresponding Author: caisiqi@hit.edu.cn
 
 ---
 
@@ -68,30 +66,9 @@ $$\min_{\boldsymbol{\delta} \in \mathcal{C}} \; \mathbb{E}_{\mathbf{x} \sim \mat
 
 ## Main Results
 
-### Quantitative Comparison (Table 1)
-
-| Dataset | Victim Model | Clean Tokens | Attack Method | Adv Tokens | Token Ratio ↑ | Overhead (s) ↑ |
-|---|---|:---:|---|:---:|:---:|:---:|
-| **BDDX** | LLaVA-NeXT-Video-7B | 28.4 | Random Noise | 31.4 | 5.2× | -0.05 |
-| | | | Verbose Images | 31.0 | 5.0× | -0.05 |
-| | | | NICGSlowDown | 32.5 | 1.7× | 0.07 |
-| | | | **VidDoS (Ours)** | **333.5** | **67.1×** | **8.25** |
-| | Qwen3-VL-4B-Instruct | 2.0 | **VidDoS (Ours)** | **394.6** | **197.3×** | **15.41** |
-| | Video-LLaVA-7B-hf | 2.0 | **VidDoS (Ours)** | **411.5** | **205.7×** | **11.09** |
-| **VideoSimpleQA** | LLaVA-NeXT-Video-7B | 89.4 | **VidDoS (Ours)** | **352.2** | **6.5×** | **6.97** |
-| | Qwen3-VL-4B-Instruct | 29.0 | **VidDoS (Ours)** | **169.6** | **30.6×** | **5.64** |
-| | Video-LLaVA-7B-hf | 30.7 | **VidDoS (Ours)** | **462.6** | **17.9×** | **11.62** |
-| **D²-City** | LLaVA-NeXT-Video-7B | 3.0 | **VidDoS (Ours)** | **163.8** | **54.6×** | **4.25** |
-| | Qwen3-VL-4B-Instruct | 2.0 | **VidDoS (Ours)** | **254.8** | **127.4×** | **9.93** |
-| | Video-LLaVA-7B-hf | 2.0 | **VidDoS (Ours)** | **233.6** | **116.8×** | **6.27** |
-
-### Robustness to Decoding Temperature (Qwen3-VL on BDDX)
-
-| Temperature | Adv Tokens | Overhead (s) | Expansion Ratio |
-|:---:|:---:|:---:|:---:|
-| 0.0 (Greedy) | 487.3 | 19.21 | 243.6× |
-| 0.7 (Default) | 511.4 | 20.20 | 255.7× |
-| 1.5 | **511.5** | **20.55** | **255.7×** |
+<p align="center">
+  <img src="Figs/Results.PNG" alt="VidDoS Main Results" width="95%">
+</p>
 
 VidDoS maintains attack potency above **240×** even at temperature 1.5, confirming resistance to stochastic decoding strategies.
 
@@ -270,16 +247,7 @@ results/<model>/<run_name>/
 
 ## Citation
 
-If you find this work useful for your research, please cite:
-
-```bibtex
-@inproceedings{tang2026viddos,
-  title     = {VidDoS: Universal Denial-of-Service Attack on Video-based Large Language Models},
-  author    = {Tang, Duoxun and Dai, Dasen and Wang, Jiyao and Yang, Xiao and Cai, Siqi},
-  booktitle = {European Conference on Computer Vision (ECCV)},
-  year      = {2026}
-}
-```
+If you find this work useful for your research, please cite our paper (BibTeX will be available upon publication).
 
 ---
 
