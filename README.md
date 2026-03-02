@@ -19,7 +19,7 @@ ECCV 2026 | \* Corresponding Author: caisiqi@hit.edu.cn
 ## Overview
 
 <p align="center">
-  <img src="Figs/image.png" alt="VidDoS Overview" width="85%">
+  <img src="Figs/Methodology.jpg" alt="VidDoS Methodology Overview" width="95%">
 </p>
 
 Video-LLMs are increasingly deployed in safety-critical applications (e.g., autonomous driving) but are inherently vulnerable to **Energy-Latency Attacks (ELAs)** that exhaust computational resources. Current image-centric methods fail against Video-LLMs for three reasons:
@@ -100,6 +100,12 @@ VidDoS maintains attack potency above **240×** even at temperature 1.5, confirm
 
 VidDoS is evaluated on a real-time streaming sliding-window pipeline that mimics onboard autonomous driving inference. Under adversarial conditions, cumulative inference latency rapidly exceeds the critical safety threshold ($\tau_{\text{human}} = 2.72\text{s}$), causing the system to miss time-sensitive manual takeover windows and directly endangering passenger safety.
 
+<p align="center">
+  <img src="Figs/Cumulative.jpg" alt="Cumulative Latency under VidDoS Attack" width="70%">
+</p>
+
+*Cumulative latency under VidDoS attack in the video streaming scenario. A safety violation occurs when cumulative latency exceeds $\tau_{\text{safe}}$, encroaching on the driver's required takeover window.*
+
 ---
 
 ## Installation
@@ -140,7 +146,7 @@ We evaluate on three video datasets. Each dataset directory should contain a `QA
 |---|---|---|
 | [BDDX](https://github.com/JinkyuKimUCB/BDD-X-dataset) | High-dynamic autonomous driving dashcam | Autonomous Driving |
 | [D²-City](https://arxiv.org/abs/1904.01975) | Diverse traffic dashcam scenarios | Autonomous Driving |
-| [VideoSimpleQA](https://arxiv.org/abs/XXXX) | General video question answering | General |
+| [VideoSimpleQA](https://videosimpleqa.github.io/) | General video question answering | General |
 
 Place datasets under the `benchmark/` directory:
 ```
@@ -280,8 +286,4 @@ If you find this work useful for your research, please cite:
 
 ## Acknowledgements
 
-We thank the authors of [Verbose Images](https://arxiv.org/abs/XXXX), [NICGSlowDown](https://arxiv.org/abs/XXXX), and [Sponge Examples](https://arxiv.org/abs/2106.02078) for making their code publicly available, which served as baselines in our evaluation.
-
----
-
-*For questions or issues, please open a GitHub Issue or contact the corresponding author at caisiqi@hit.edu.cn.*
+We thank the authors of [Verbose Images](https://arxiv.org/abs/2406.10913), [NICGSlowDown](https://github.com/SeekingDream/CVPR22_NICGSlowDown) and [Sponge Examples](https://arxiv.org/abs/2106.02078) for making their code publicly available, which served as baselines in our evaluation.
