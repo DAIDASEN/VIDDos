@@ -226,22 +226,9 @@ results/<model>/<run_name>/
 
 ## Ablation Study
 
-| Dimension | Configuration | Adv Tokens ↑ | Overhead (s) ↑ |
-|---|---|:---:|:---:|
-| **Spatial Size** | 48×48 | 94.5 | 3.83 |
-| | **96×96 (default)** | **172.6** | **6.74** |
-| | 224×224 | 307.8 | 11.92 |
-| **Temporal Frames** | 8 Frames | 371.4 | 14.71 |
-| | **16 Frames (default)** | **172.6** | **6.74** |
-| **Perturbation Mode** | ℓ∞ Additive Noise | 2.0 | 0.09 |
-| | Random Position | 104.2 | 4.16 |
-| | **Replacement (default)** | **172.6** | **6.74** |
-| **Loss Components** | Only L_TF | 58.2 | 2.26 |
-| | w/o L_ban | 134.7 | 5.23 |
-| | w/o L_stop | 169.2 | 6.63 |
-| | **Full Joint Loss** | **172.6** | **6.74** |
-
-*All ablations on BDDX dataset with Qwen3-VL-4B-Instruct.*
+<p align="center">
+  <img src="Figs/Ablation.PNG" alt="VidDoS Ablation Study" width="95%">
+</p>
 
 ---
 
