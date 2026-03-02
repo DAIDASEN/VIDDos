@@ -253,4 +253,4 @@ If you find this work useful for your research, please cite our paper (BibTeX wi
 
 ## Acknowledgements
 
-We thank the authors of [Verbose Images](https://arxiv.org/abs/2406.10913), [NICGSlowDown](https://github.com/SeekingDream/CVPR22_NICGSlowDown) and [Sponge Examples](https://arxiv.org/abs/2106.02078) for making their code publicly available, which served as baselines in our evaluation.
+We thank the authors of [Verbose Images](https://arxiv.org/abs/2406.10913) and [NICGSlowDown](https://github.com/SeekingDream/CVPR22_NICGSlowDown) for making their code publicly available, which served as baselines in our evaluation.
