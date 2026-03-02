@@ -1,0 +1,36 @@
+# Paper source files (not for public release)
+ECCV2026/
+ECCV2026.pdf
+
+# Experiment results (large outputs)
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch checkpoints (large)
+*.pt
+*.pth
+*.ckpt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

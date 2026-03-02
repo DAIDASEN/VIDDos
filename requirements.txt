@@ -1,0 +1,18 @@
+# === Deep Learning Framework ===
+torch>=2.1.0
+torchvision>=0.16.0
+
+# === Hugging Face Ecosystem ===
+# 注意：transformers 需要较新版本以原生支持 LLaVA-NeXT-Video 和 Qwen3-VL 等新型号
+transformers>=4.41.0
+accelerate>=0.26.0
+peft>=0.10.0
+
+# === Video & Image Processing ===
+# av (PyAV) 是你代码中用于高效切分和保存视频帧的核心依赖
+av>=11.0.0
+Pillow>=10.0.0
+
+# === Utilities ===
+numpy>=1.24.0
+tqdm>=4.66.0
