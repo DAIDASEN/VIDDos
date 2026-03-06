@@ -1,7 +1,6 @@
 # VidDoS: Universal Denial-of-Service Attack on Video-based Large Language Models
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2603.01454"><img src="https://img.shields.io/badge/arXiv-2603.01454-b31b1b.svg" alt="arXiv"></a>
   <img src="https://img.shields.io/badge/Python-3.8%2B-green.svg" alt="Python">
   <img src="https://img.shields.io/badge/PyTorch-2.1%2B-orange.svg" alt="PyTorch">
 </p>
